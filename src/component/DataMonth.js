@@ -13,7 +13,7 @@ class DataMonth extends Component {
         };
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
         var self = this;
         const db = firebase.firestore();
         const dataMonth = db.collection("users").doc("antoine").collection("years").doc("2019").collection("mois").doc("janvier");

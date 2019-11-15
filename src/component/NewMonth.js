@@ -8,22 +8,38 @@ class NewMonth extends Component {
         super();
         this.state = {
             nomMois: "",
+            listMonth: []
         };
     }
 
-    componentWillMount = () => {
-        firebase.auth().onAuthStateChanged((user) => {
-          if (user) {
-            this.setState({ id_user: user.uid})
-          }
+    componentDidMount = () => {
+        var self = this;
+
+        const db = firebase.firestore();
+        const dataMonth = db.collection("users").doc("antoine").collection("years").doc("2019").collection("mois");
+        
+        dataMonth.get()
+        .then(function(querySnapshot) {
+            let listMonth = [];
+            querySnapshot.forEach(doc =>
+                listMonth.push(doc.id )
+            );
+            self.setState({
+                listMonth: listMonth.reverse(),
+            });
+            console.log(self.state.listMonth);
+        })
+        .catch(function(error) {
+            console.log("Error getting document:", error);
         });
+
           
     }
     
 
     addMonth = e => {
         const db = firebase.firestore();
-        const userRef = db.collection("users").doc("antoine").collection("years").doc("2019").collection("mois").doc(this.state.nomMois).set({
+        db.collection("users").doc("antoine").collection("years").doc("2019").collection("mois").doc(this.state.nomMois).set({
             entreemois: "",
             sortiemois: ""
         });  
@@ -41,6 +57,11 @@ class NewMonth extends Component {
    render() {
     return (
         <div className="wrapper-menu-burger">
+            <ul>
+                {this.state.listMonth.map(function(name, index){
+                    return <li key={ index }>{name}</li>;
+                })}
+            </ul>
             <label htmlFor="mois">Mois</label>
             <input
                 id="mois"

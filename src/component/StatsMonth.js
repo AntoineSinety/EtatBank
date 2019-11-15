@@ -12,7 +12,7 @@ class EnterMonth extends Component {
         };
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
         firebase.auth().onAuthStateChanged((user) => {
           if (user) {
             this.setState({ id_user: user.uid})
@@ -29,7 +29,7 @@ class EnterMonth extends Component {
     updateStatsMonth = e => {
         e.preventDefault();
         const db = firebase.firestore();
-        const userRef = db.collection("users").doc("antoine").collection("years").doc("2019").collection("mois").doc("janvier").set({
+        db.collection("users").doc("antoine").collection("years").doc("2019").collection("mois").doc("janvier").set({
             entreemois: this.state.entreemois,
             sortiemois: this.state.sortiemois
         });  
