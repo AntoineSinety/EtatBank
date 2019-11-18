@@ -56,10 +56,10 @@ class NewMonth extends Component {
 
    render() {
     return (
-        <div className="wrapper-menu-burger">
+        <div className="wrapper-new-month">
             <ul>
                 {this.state.listMonth.map(function(name, index){
-                    return <li key={ index }>{name}</li>;
+                    return <li key={ index } >{name}</li>;
                 })}
             </ul>
             <label htmlFor="mois">Mois</label>

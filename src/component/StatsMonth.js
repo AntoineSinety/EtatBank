@@ -12,12 +12,10 @@ class EnterMonth extends Component {
         };
     }
 
+
+
     componentDidMount = () => {
-        firebase.auth().onAuthStateChanged((user) => {
-          if (user) {
-            this.setState({ id_user: user.uid})
-          }
-        });
+
           
     }
 
@@ -41,7 +39,7 @@ class EnterMonth extends Component {
 
    render() {
     return (
-        <div className="wrapper-menu-burger">
+        <div className="wrapper-stats-month">
             <h1 data-aos="slide-right">Entrée du mois</h1>
 
             <form onSubmit={this.updateStatsMonth}>

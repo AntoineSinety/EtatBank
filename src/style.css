@@ -89,3 +89,12 @@ h5 {
   margin-bottom: 1em;
 }
 /*=====  End of Menu header fix left  ======*/
+.wrapper-stats-month {
+  background-color: lightblue;
+}
+.wrapper-new-month {
+  background-color: lightcoral;
+}
+.wrapper-data-month {
+  background-color: lightgreen;
+}
