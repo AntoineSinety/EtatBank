@@ -89,6 +89,17 @@ h5 {
   margin-bottom: 1em;
 }
 /*=====  End of Menu header fix left  ======*/
+.list-mois {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-mois li {
+  padding: 0.2em 1em;
+  border-radius: 5px;
+  margin: 0 0.5em;
+  background-color: lightblue;
+}
 .wrapper-stats-month {
   background-color: lightblue;
 }
