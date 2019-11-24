@@ -3,9 +3,10 @@ import React, { Component } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import EnterMonth from "./FormMonth";
+import EnterMonth from "./EnterMonth";
 import NewMonth from "./ListeMonth";
-import DataMonth from "./DataMonth";
+import GraphYear from "./GraphYear";
+// import DataMonth from "./DataMonth";
 
 AOS.init();
 
@@ -38,9 +39,10 @@ class Dashboard extends Component {
           </ul>
         </div>
         <div className="content-element">
-          <EnterMonth />
+          <EnterMonth  currentMonth={'Mai'} />
           <NewMonth />
-          <DataMonth />
+          <GraphYear />
+          {/* <DataMonth /> */}
         </div>
       </div>
     );
