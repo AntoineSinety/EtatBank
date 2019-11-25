@@ -2,9 +2,11 @@ import React, { Component } from "react";
 
 import firebase from "./Firebase/firebase";
 
-import { Doughnut } from "react-chartjs-2";
-import 'chartjs-plugin-datalabels';
+import { ButtonToolbar, Button } from "react-bootstrap";
 
+
+import { Doughnut } from "react-chartjs-2";
+import "chartjs-plugin-datalabels";
 
 class NewMonth extends Component {
     constructor() {
@@ -15,15 +17,13 @@ class NewMonth extends Component {
                 labels: ["Entrée", "Sortie"],
                 datasets: [
                     {
-                        data: ["10", "10"],
+                        data: [],
                         backgroundColor: ["#5ac492", "#d6535d"],
                         hoverBackgroundColor: ["#5ac492", "#d6535d"]
                     }
                 ]
             }
         };
-
-        // this.displayDataMonth = this.displayDataMonth.bind(this);
     }
 
     componentDidMount = () => {
@@ -40,7 +40,7 @@ class NewMonth extends Component {
 
         dataMonth
             .get()
-            .then(function (querySnapshot) {
+            .then(function(querySnapshot) {
                 let listMonth = [];
                 querySnapshot.forEach(doc => {
                     listMonth.push(doc.id);
@@ -49,13 +49,15 @@ class NewMonth extends Component {
                     });
                 });
             })
-            .catch(function (error) {
+            .catch(function(error) {
                 console.log("Error getting document:", error);
             });
     };
 
-
     displayDataMonth(month) {
+        this.setState({currentMonth: month});
+
+
         var self = this;
         const db = firebase.firestore();
         const dataMonth = db
@@ -68,45 +70,58 @@ class NewMonth extends Component {
 
         dataMonth
             .get()
-            .then(function (doc) {
+            .then(function(doc) {
                 if (doc.exists) {
                     let newState = Object.assign({}, self.state);
-                    newState.dataState.datasets[0].data = [doc.data().entreemois, doc.data().sortiemois];
+                    newState.dataState.datasets[0].data = [
+                        doc.data().entreemois,
+                        doc.data().sortiemois
+                    ];
                     self.setState(newState);
                 } else {
                     // doc.data() will be undefined in this case
                     console.log("No such document!");
                 }
             })
-            .catch(function (error) {
+            .catch(function(error) {
                 console.log("Error getting document:", error);
             });
+
+
     }
 
     render() {
         return (
             <div className="wrapper-new-month">
-                <ul className="list-mois">
-                    {this.state.listMonth.map(function (name, index) {
-                        return (
-                            <li key={index}>
-                                <button
-                                    onClick={() => {
-                                        this.displayDataMonth(name);
-                                    }}
-                                >
-                                    {name}
-                                </button>
-                            </li>
-                        );
-                    }, this)}
-                </ul>
+                <ButtonToolbar>
+                    <ul className="list-mois">
+                        {this.state.listMonth.map(function(name, index) {
+                            return (
+                                <li key={index}>
+                                    <Button
+                                        variant="secondary"
+                                        className={(this.state.currentMonth === name) ? "btn-success" : null}
+                                        onClick={() => {
+                                            this.displayDataMonth(name);
+                                        }}
+                                    >
+                                        {name}
+                                    </Button>
+                                </li>
+                            );
+                        }, this)}
+                    </ul>
+                </ButtonToolbar>
                 <Doughnut
                     data={this.state.dataState}
                     title="My amazing data"
                     color="#70CAD1"
                     redraw
-                    options={{ plugins: { datalabels: { display: true, color: 'white' } } }}
+                    options={{
+                        plugins: {
+                            datalabels: { display: true, color: "white" }
+                        }
+                    }}
                 />
             </div>
         );

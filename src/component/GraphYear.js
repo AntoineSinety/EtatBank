@@ -4,16 +4,6 @@ import firebase from "./Firebase/firebase";
 
 import { Doughnut, Line } from "react-chartjs-2";
 
-var dataTest = {
-    labels: ["Red", "Green", "Yellow"],
-    datasets: [
-        {
-            data: [300, 50, 100],
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
-        }
-    ]
-};
 
 class GraphYear extends Component {
     constructor(props) {
@@ -130,7 +120,18 @@ class GraphYear extends Component {
                             }
                         ]
                     }}
+                    width={800}
+                    height={300}
                     options={{
+                        // maintainAspectRatio: true,
+                        pointBorderColor  : "#FFFFFF",
+
+                        legend: {
+                            labels: {
+                                // This more specific font property overrides the global property
+                                fontColor: 'white'
+                            }
+                        },
                         scales: {
                             yAxes: [
                                 {

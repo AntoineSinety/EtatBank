@@ -1,22 +1,26 @@
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+    font-family: "Roboto", sans-serif;
     background-color: #25282f;
     color: white;
 }
 
-@violet:#3c374d;
+@violet: #3c374d;
 @orange: rgb(133, 70, 34);
 @bleu: #2175d9;
 @rouge: #e74536;
 
-h1,h2, h3, h4,h5{
-    font-family: 'Hammersmith One', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Hammersmith One", sans-serif;
 }
 
 /*=============================================
 =            Menu header fix left            =
 =============================================*/
-.menu-header{
+.menu-header {
     width: 250px;
     background-color: rgb(60, 55, 77);
     position: fixed;
@@ -25,8 +29,8 @@ h1,h2, h3, h4,h5{
     top: 0;
     padding-top: 4em;
     z-index: 999;
-     
-    .logo-wrapper{
+
+    .logo-wrapper {
         max-width: 100%;
         display: flex;
         align-items: center;
@@ -36,21 +40,20 @@ h1,h2, h3, h4,h5{
         width: 100%;
         top: 0;
         left: 0;
-        .logo{
+        .logo {
             max-width: 100%;
             width: 80px;
             display: inline-block;
             // margin: auto;
             margin-left: 2em;
         }
-        span{
+        span {
             display: inline-block;
             color: white;
-            font-family: 'Hammersmith One', sans-serif;
+            font-family: "Hammersmith One", sans-serif;
             font-weight: bold;
             margin-left: 0.5em;
         }
-
     }
     ul {
         display: flex;
@@ -58,16 +61,16 @@ h1,h2, h3, h4,h5{
         list-style: none;
         padding: 0;
         margin: 0;
-        li{
+        li {
             // margin: 0.5em;
 
-            &:hover{
+            &:hover {
                 background-color: #2175d9;
             }
-            &.active{
+            &.active {
                 background-color: #e74536;
             }
-            span{
+            span {
                 text-decoration: none;
                 color: white;
                 cursor: pointer;
@@ -75,38 +78,75 @@ h1,h2, h3, h4,h5{
                 display: block;
                 padding: 0.6em;
 
-                &:hover{
+                &:hover {
                     // text-decoration: underline;
                 }
             }
         }
     }
-
 }
-.dashboard{
+.dashboard {
     // display: flex;
 }
-.content-element{
+.content-element {
     // width: ~"calc(100% - 250px - 13px)";
     margin-left: 250px;
     box-sizing: border-box;
     position: relative;
     min-width: auto;
-    
 }
 /*=====  End of Menu header fix left  ======*/
 
-.list-mois{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    li{
-        padding: 0.2em 1em;
-        border-radius: 5px;
-        margin: 0 0.5em;
-        background-color: lightblue;
+.wrapper-new-month {
+    display: inline-block;
+    background-color: #3c374d;
+    padding: 2em;
+    border-radius: 15px;
+    margin: 2em;
+    width: 800px;
+    box-sizing: border-box;
+    .list-mois {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            margin: 0.3em;
+            button {
+                outline: none;
+            }
+        }
+    }
+}
+
+.wrapper-stats-month {
+    display: inline-block;
+    background-color: #3c374d;
+    padding: 2em;
+    border-radius: 15px;
+    margin: 2em;
+    width: 500px;
+    box-sizing: border-box;
+    h3 {
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
+    .form-test .row {
+        flex-direction: column;
+        & > .col {
+            margin: 0.5em 0;
+        }
     }
 }
 
 
-
+.wrapper-data-month{
+    display: inline-block;
+    background-color: #3c374d;
+    padding: 2em;
+    border-radius: 15px;
+    margin: 2em;
+    box-sizing: border-box;
+    position: relative;
+    
+}
