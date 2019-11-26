@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/EtatBank/precache-manifest.f10d43beb34c68146157667d2db30bb4.js"
+  "/EtatBank/precache-manifest.81f3967acd0e589e696e3771c9d5f59d.js"
 );
 
 self.addEventListener('message', (event) => {
