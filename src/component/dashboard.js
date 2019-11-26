@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 import EnterMonth from "./EnterMonth";
 import NewMonth from "./ListeMonth";
 import GraphYear from "./GraphYear";
+import TotalCompte from "./TotalCompte";
+import DetailsAnnee from "./DetailsAnnee";
 // import DataMonth from "./DataMonth";
 
 AOS.init();
@@ -42,6 +44,8 @@ class Dashboard extends Component {
           <EnterMonth  currentMonth={'Mai'} />
           <NewMonth />
           <GraphYear />
+          <TotalCompte />
+          <DetailsAnnee />
           {/* <DataMonth /> */}
         </div>
       </div>
