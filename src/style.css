@@ -14,6 +14,7 @@ h5 {
 =            Menu header fix left            =
 =============================================*/
 .menu-header {
+  display: none;
   width: 250px;
   background-color: #3c374d;
   position: fixed;
@@ -69,7 +70,6 @@ h5 {
   padding: 0.6em;
 }
 .content-element {
-  margin-left: 250px;
   box-sizing: border-box;
   position: relative;
   min-width: auto;
@@ -81,7 +81,7 @@ h5 {
   padding: 2em;
   border-radius: 15px;
   margin: 2em;
-  width: 800px;
+  width: 95%;
   box-sizing: border-box;
 }
 .wrapper-new-month .list-mois {
@@ -101,7 +101,7 @@ h5 {
   padding: 2em;
   border-radius: 15px;
   margin: 2em;
-  width: 500px;
+  width: 95%;
   box-sizing: border-box;
 }
 .wrapper-stats-month h3 {
@@ -131,7 +131,7 @@ h5 {
   margin: 2em;
   box-sizing: border-box;
   position: relative;
-  width: 600px;
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -173,7 +173,7 @@ h5 {
   margin: 2em;
   box-sizing: border-box;
   position: relative;
-  width: 600px;
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

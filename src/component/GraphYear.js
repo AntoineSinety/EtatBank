@@ -120,7 +120,7 @@ class GraphYear extends Component {
                             }
                         ]
                     }}
-                    width={800}
+                    // width={320}
                     height={300}
                     options={{
                         // maintainAspectRatio: true,
