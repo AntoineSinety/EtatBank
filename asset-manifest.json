@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/EtatBank/static/css/main.6f09f20b.chunk.css",
-    "main.js": "/EtatBank/static/js/main.c871da81.chunk.js",
-    "main.js.map": "/EtatBank/static/js/main.c871da81.chunk.js.map",
+    "main.css": "/EtatBank/static/css/main.20bcf7d3.chunk.css",
+    "main.js": "/EtatBank/static/js/main.d7acf7b1.chunk.js",
+    "main.js.map": "/EtatBank/static/js/main.d7acf7b1.chunk.js.map",
     "runtime-main.js": "/EtatBank/static/js/runtime-main.534d10a2.js",
     "runtime-main.js.map": "/EtatBank/static/js/runtime-main.534d10a2.js.map",
     "static/css/2.bcacc502.chunk.css": "/EtatBank/static/css/2.bcacc502.chunk.css",
-    "static/js/2.34700cfc.chunk.js": "/EtatBank/static/js/2.34700cfc.chunk.js",
-    "static/js/2.34700cfc.chunk.js.map": "/EtatBank/static/js/2.34700cfc.chunk.js.map",
+    "static/js/2.4284d778.chunk.js": "/EtatBank/static/js/2.4284d778.chunk.js",
+    "static/js/2.4284d778.chunk.js.map": "/EtatBank/static/js/2.4284d778.chunk.js.map",
     "index.html": "/EtatBank/index.html",
-    "precache-manifest.7d809717788fce13fd6d7b1d3377f4a4.js": "/EtatBank/precache-manifest.7d809717788fce13fd6d7b1d3377f4a4.js",
+    "precache-manifest.f10d43beb34c68146157667d2db30bb4.js": "/EtatBank/precache-manifest.f10d43beb34c68146157667d2db30bb4.js",
     "service-worker.js": "/EtatBank/service-worker.js",
     "static/css/2.bcacc502.chunk.css.map": "/EtatBank/static/css/2.bcacc502.chunk.css.map",
-    "static/css/main.6f09f20b.chunk.css.map": "/EtatBank/static/css/main.6f09f20b.chunk.css.map"
+    "static/css/main.20bcf7d3.chunk.css.map": "/EtatBank/static/css/main.20bcf7d3.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.534d10a2.js",
     "static/css/2.bcacc502.chunk.css",
-    "static/js/2.34700cfc.chunk.js",
-    "static/css/main.6f09f20b.chunk.css",
-    "static/js/main.c871da81.chunk.js"
+    "static/js/2.4284d778.chunk.js",
+    "static/css/main.20bcf7d3.chunk.css",
+    "static/js/main.d7acf7b1.chunk.js"
   ]
 }
